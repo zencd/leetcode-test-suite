@@ -115,6 +115,12 @@ class TestSolution(unittest.TestCase):
     def test_duplicates_and_gaps(self):
         self.assertEqual(self.solution.longestConsecutive([2, 2, 6, 4, 8, 10]), 1)
 
+    def test_extra_1(self):
+        self.assertEqual(self.solution.longestConsecutive([4, 2, 2, -4, 0, -2, 4, -3, -4, -4, -5, 1, 4, -9, 5, 0, 6, -8, -1, -3, 6, 5, -8, -1, -5, -1, 2, -9, 1]), 8)
+
+    def test_merge_then_duplicate(self):
+        self.assertEqual(self.solution.longestConsecutive([-4, -2, -1, 1, 0, -3, 0, 2]), 7)
+
 
 if __name__ == "__main__":
     unittest.main()
