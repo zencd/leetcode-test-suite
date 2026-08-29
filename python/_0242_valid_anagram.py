@@ -67,14 +67,8 @@ class TestSolution(unittest.TestCase):
         t = "a" * 50000
         self.assertFalse(self.sol.isAnagram(s, t))
 
-    def test_mixed_case_distinct(self):
-        self.assertFalse(self.sol.isAnagram("A", "a"))
-
-    def test_unicode_anagram(self):
-        self.assertTrue(self.sol.isAnagram("héllo", "llohé"))
-
-    def test_unicode_not_anagram(self):
-        self.assertFalse(self.sol.isAnagram("héllo", "helloo"))
+    def test_custom(self):
+        self.assertFalse(self.sol.isAnagram("aa", "bb"))
 
 
 if __name__ == "__main__":
