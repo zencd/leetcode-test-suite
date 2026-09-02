@@ -11,7 +11,7 @@ class Solution:
         raise Exception("Not solved yet")
 
 
-class RemoveDuplicatesTest(unittest.TestCase):
+class TestRemoveDuplicates(unittest.TestCase):
     def test_example_1(self):
         nums = [1, 1, 1, 2, 2, 3]
         k = Solution().removeDuplicates(nums)

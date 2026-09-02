@@ -11,7 +11,7 @@ class Solution:
         raise Exception("Not solved yet")
 
 
-class NextPermutationTest(unittest.TestCase):
+class TestNextPermutation(unittest.TestCase):
     def make(self, nums):
         sol = Solution()
         sol.nextPermutation(nums)
@@ -89,9 +89,7 @@ class NextPermutationTest(unittest.TestCase):
             all_perms.sort()
             idx = all_perms.index(original)
             expected_next = all_perms[(idx + 1) % len(all_perms)]
-            self.assertEqual(
-                self.make(nums), expected_next, msg=f"input was {original}"
-            )
+            self.assertEqual(self.make(nums), expected_next, msg=f"input was {original}")
 
 
 if __name__ == "__main__":

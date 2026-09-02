@@ -42,7 +42,7 @@ def to_linked_list(values):
 import unittest
 
 
-class PartitionListTests(unittest.TestCase):
+class TestPartitionList(unittest.TestCase):
     def test_example_1(self):
         head = to_linked_list([1, 4, 3, 2, 5, 2])
         result = Solution().partition(head, 3)

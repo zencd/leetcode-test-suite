@@ -10,7 +10,7 @@ class Solution:
         raise Exception("Not solved yet")
 
 
-class LongestValidParenthesesTests(unittest.TestCase):
+class TestLongestValidParentheses(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 

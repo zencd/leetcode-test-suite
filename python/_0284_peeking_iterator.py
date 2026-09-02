@@ -2,6 +2,20 @@
 # https://leetcode.com/problems/peeking-iterator/
 # Medium
 
+class PeekingIterator:
+    def __init__(self, iterator):
+        raise Exception("Not solved yet")
+
+    def peek(self):
+        raise Exception("Not solved yet")
+
+    def next(self):
+        raise Exception("Not solved yet")
+
+    def hasNext(self):
+        raise Exception("Not solved yet")
+
+
 import unittest
 
 
@@ -19,20 +33,6 @@ class Iterator:
         value = self.nums[self.index]
         self.index += 1
         return value
-
-
-class PeekingIterator:
-    def __init__(self, iterator):
-        raise Exception("Not solved yet")
-
-    def peek(self):
-        raise Exception("Not solved yet")
-
-    def next(self):
-        raise Exception("Not solved yet")
-
-    def hasNext(self):
-        raise Exception("Not solved yet")
 
 
 class TestSolution(unittest.TestCase):

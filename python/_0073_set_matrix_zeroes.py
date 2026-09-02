@@ -11,7 +11,7 @@ class Solution:
         raise Exception("Not solved yet")
 
 
-class SetMatrixZeroesTest(unittest.TestCase):
+class TestSetMatrixZeroes(unittest.TestCase):
     def test_single_zero_in_center(self):
         matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
         Solution().setZeroes(matrix)

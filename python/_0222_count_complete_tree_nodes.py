@@ -16,11 +16,11 @@ class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
         raise Exception("Not solved yet")
 
-    @staticmethod
-    def _node_count(node: Optional[TreeNode]) -> int:
-        if node is None:
-            return 0
-        return 1 + Solution._node_count(node.left) + Solution._node_count(node.right)
+
+def _node_count(node: Optional[TreeNode]) -> int:
+    if node is None:
+        return 0
+    return 1 + _node_count(node.left) + _node_count(node.right)
 
 
 def build_tree(values):
@@ -74,9 +74,7 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(self.solution.countNodes(build_tree([1, 2, 3, 4, 5, 6, 7])), 7)
 
     def test_eight_nodes(self):
-        self.assertEqual(
-            self.solution.countNodes(build_tree([1, 2, 3, 4, 5, 6, 7, 8])), 8
-        )
+        self.assertEqual(self.solution.countNodes(build_tree([1, 2, 3, 4, 5, 6, 7, 8])), 8)
 
     def test_fifteen_nodes_full(self):
         self.assertEqual(self.solution.countNodes(build_tree(list(range(1, 16)))), 15)
@@ -106,7 +104,7 @@ class TestSolution(unittest.TestCase):
         for _ in range(50):
             n = random.randint(0, 200)
             tree = build_tree(list(range(1, n + 1)))
-            expected = Solution._node_count(tree)
+            expected = _node_count(tree)
             self.assertEqual(self.solution.countNodes(tree), expected)
 
 
