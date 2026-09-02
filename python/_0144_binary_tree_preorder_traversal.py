@@ -17,6 +17,9 @@ class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         raise Exception("Not solved yet")
 
+    def preorderTraversalIterative(self, root: Optional[TreeNode]) -> List[int]:
+        raise Exception("Not solved yet")
+
 
 def build_tree(values):
     if not values:
