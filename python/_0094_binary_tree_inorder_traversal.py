@@ -42,7 +42,7 @@ def build_tree(values):
     return root
 
 
-class InorderTraversalTest(unittest.TestCase):
+class TestInorderTraversal(unittest.TestCase):
     def test_empty_tree(self):
         self.assertEqual(Solution().inorderTraversal(None), [])
 
@@ -50,15 +50,11 @@ class InorderTraversalTest(unittest.TestCase):
         self.assertEqual(Solution().inorderTraversal(build_tree([1])), [1])
 
     def test_example_one(self):
-        self.assertEqual(
-            Solution().inorderTraversal(build_tree([1, None, 2, 3])), [1, 3, 2]
-        )
+        self.assertEqual(Solution().inorderTraversal(build_tree([1, None, 2, 3])), [1, 3, 2])
 
     def test_example_two(self):
         values = [1, 2, 3, 4, 5, None, 8, None, None, 6, 7, 9]
-        self.assertEqual(
-            Solution().inorderTraversal(build_tree(values)), [4, 2, 6, 5, 7, 1, 3, 9, 8]
-        )
+        self.assertEqual(Solution().inorderTraversal(build_tree(values)), [4, 2, 6, 5, 7, 1, 3, 9, 8])
 
     def test_left_skewed_tree(self):
         root = TreeNode(3, TreeNode(2, TreeNode(1)), None)
@@ -70,15 +66,11 @@ class InorderTraversalTest(unittest.TestCase):
 
     def test_bst_inorder_is_sorted(self):
         values = [8, 3, 10, 1, 6, None, 14]
-        self.assertEqual(
-            Solution().inorderTraversal(build_tree(values)), [1, 3, 6, 8, 10, 14]
-        )
+        self.assertEqual(Solution().inorderTraversal(build_tree(values)), [1, 3, 6, 8, 10, 14])
 
     def test_negative_values(self):
         values = [-5, -10, -1, -15, -5, None, 0]
-        self.assertEqual(
-            Solution().inorderTraversal(build_tree(values)), [-15, -10, -5, -5, -1, 0]
-        )
+        self.assertEqual(Solution().inorderTraversal(build_tree(values)), [-15, -10, -5, -5, -1, 0])
 
     def test_duplicate_values(self):
         values = [2, 2, 2, 2, 2, 2, 2]
@@ -86,9 +78,7 @@ class InorderTraversalTest(unittest.TestCase):
 
     def test_full_binary_tree(self):
         values = [1, 2, 3, 4, 5, 6, 7]
-        self.assertEqual(
-            Solution().inorderTraversal(build_tree(values)), [4, 2, 5, 1, 6, 3, 7]
-        )
+        self.assertEqual(Solution().inorderTraversal(build_tree(values)), [4, 2, 5, 1, 6, 3, 7])
 
     def test_node_with_only_left_child(self):
         self.assertEqual(Solution().inorderTraversal(build_tree([1, 2])), [2, 1])

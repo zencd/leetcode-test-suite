@@ -13,7 +13,7 @@ class Solution:
 import unittest
 
 
-class ThreeSumClosestTests(unittest.TestCase):
+class TestThreeSumClosest(unittest.TestCase):
     def setUp(self):
         self.sol = Solution()
 
