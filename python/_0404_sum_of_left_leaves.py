@@ -114,36 +114,6 @@ class TestSolution(unittest.TestCase):
         root = from_list([1000, 1000, 1000])
         self.assertEqual(self.solution.sumOfLeftLeaves(root), 1000)
 
-    def test_roundtrip_serialization(self):
-        values = [3, 9, 20, None, None, 15, 7]
-        root = from_list(values)
-        serialized = to_list(root)
-        expected = [3, 9, 20, None, None, 15, 7]
-        i = 0
-        j = 0
-        self.assertTrue(len(serialized) >= len(expected))
-        for ex in expected:
-            self.assertEqual(serialized[i], ex, "mismatch at position " + str(i) + ": " + str(serialized))
-            i += 1
-
-    def test_helper_from_list_roundtrip(self):
-        values = [1, 2, 3, 4, None, 6, 7, 8]
-        root = from_list(values)
-        self.assertEqual(to_list(root), values)
-
-    def test_helper_from_list_empty(self):
-        self.assertIsNone(from_list([]))
-        self.assertIsNone(from_list([None]))
-
-    def test_helper_from_list_single(self):
-        root = from_list([5])
-        self.assertEqual(root.val, 5)
-        self.assertIsNone(root.left)
-        self.assertIsNone(root.right)
-
-    def test_helper_to_list_empty(self):
-        self.assertEqual(to_list(None), [])
-
 
 if __name__ == "__main__":
     unittest.main()

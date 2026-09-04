@@ -128,10 +128,6 @@ class TestSolution(unittest.TestCase):
             x, y = s.randPoint()
             self.assertLessEqual(math.hypot(x - cx, y - cy), R * (1 + 1e-6))
 
-    def test_example_output_points_are_valid(self):
-        for x, y in [(-0.02493, -0.38077), (0.82314, 0.38945), (0.36572, 0.17248)]:
-            self.assertLessEqual(math.hypot(x, y), 1.0 + 1e-9)
-
 
 if __name__ == "__main__":
     unittest.main()

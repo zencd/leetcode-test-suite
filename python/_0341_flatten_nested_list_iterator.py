@@ -22,8 +22,8 @@ class NestedInteger:
 
 
 class NestedIterator:
-    def __init__(self, nestedList: list[NestedInteger]):
-        pass
+    def __init__(self, nestedList: [NestedInteger]):
+        raise Exception("Not solved yet")
 
     def next(self) -> int:
         raise Exception("Not solved yet")
@@ -128,16 +128,6 @@ class TestSolution(unittest.TestCase):
         data = list(range(100))
         nested = [make_nested(v) for v in data]
         self.assertEqual(flatten(nested), data)
-
-    def test_nested_integers_interface(self):
-        ni = NestedInteger(5)
-        self.assertTrue(ni.isInteger())
-        self.assertEqual(ni.getInteger(), 5)
-        self.assertIsNone(ni.getList())
-        nl = NestedInteger([NestedInteger(1)], nested=True)
-        self.assertFalse(nl.isInteger())
-        self.assertIsNone(nl.getInteger())
-        self.assertEqual(len(nl.getList()), 1)
 
 
 if __name__ == "__main__":

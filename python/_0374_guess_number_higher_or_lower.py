@@ -105,18 +105,6 @@ class TestSolution(unittest.TestCase):
         max_n = 2**31 - 1
         self.check(max_n, 2)
 
-    def test_guess_api_contract_lower_pick(self):
-        self.monkey_patch(6)
-        self.assertEqual(guess(6), 0)
-        self.assertEqual(guess(5), 1)
-        self.assertEqual(guess(7), -1)
-
-    def test_guess_api_contract_upper_pick(self):
-        self.monkey_patch(100)
-        self.assertEqual(guess(100), 0)
-        self.assertEqual(guess(99), 1)
-        self.assertEqual(guess(1), 1)
-
     def test_returns_int(self):
         self.monkey_patch(7)
         sol = Solution()

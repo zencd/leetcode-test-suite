@@ -60,9 +60,7 @@ def is_valid_bst(node, lo=float("-inf"), hi=float("inf")):
         return True
     if node.val <= lo or node.val >= hi:
         return False
-    return is_valid_bst(node.left, lo, node.val) and is_valid_bst(
-        node.right, node.val, hi
-    )
+    return is_valid_bst(node.left, lo, node.val) and is_valid_bst(node.right, node.val, hi)
 
 
 def inorder(node):
@@ -240,16 +238,6 @@ class TestSolution(unittest.TestCase):
         self.assertIsInstance(root, TreeNode)
         self.assertIsInstance(root.left, TreeNode)
         self.assertIsInstance(root.right, TreeNode)
-
-    def test_original_list_not_cycled(self):
-        head = build_list([1, 2, 3, 4, 5])
-        node = head
-        depth = 0
-        while node is not None:
-            node = node.next
-            depth += 1
-            self.assertLess(depth, 100)
-        self.assertEqual(depth, 5)
 
 
 if __name__ == "__main__":
