@@ -22,8 +22,8 @@ class NestedInteger:
 
 
 class NestedIterator:
-    def __init__(self, nestedList: [NestedInteger]):
-        raise Exception("Not solved yet")
+    def __init__(self, nestedList: list[NestedInteger]):
+        pass
 
     def next(self) -> int:
         raise Exception("Not solved yet")

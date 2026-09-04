@@ -6,34 +6,8 @@ from typing import List
 
 
 class Solution:
-    MIN_V = -(10**4)
-    MAX_V = 10**4
-
     def countSmaller(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        if n == 0:
-            return []
-        size = (self.MAX_V - self.MIN_V) + 2
-        tree = [0] * (size + 1)
-
-        def update(i: int) -> None:
-            while i <= size:
-                tree[i] += 1
-                i += i & (-i)
-
-        def query(i: int) -> int:
-            s = 0
-            while i > 0:
-                s += tree[i]
-                i -= i & (-i)
-            return s
-
-        ans = [0] * n
-        for i in range(n - 1, -1, -1):
-            idx = nums[i] - self.MIN_V + 1
-            ans[i] = query(idx - 1)
-            update(idx)
-        return ans
+        raise Exception("Not solved yet")
 
 
 import unittest

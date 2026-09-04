@@ -33,6 +33,9 @@ class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         raise Exception("Not solved yet")
 
+    def isSymmetricIterative(self, root: Optional[TreeNode]) -> bool:
+        raise Exception("Not solved yet")
+
 
 class TestSolution(unittest.TestCase):
     def setUp(self):

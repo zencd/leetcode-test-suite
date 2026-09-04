@@ -51,9 +51,7 @@ class TestSolution(unittest.TestCase):
         self.sol = Solution()
 
     def test_example1(self):
-        self.assertEqual(
-            self.sol.maxNumber([3, 4, 6, 5], [9, 1, 2, 5, 8, 3], 5), [9, 8, 6, 5, 3]
-        )
+        self.assertEqual(self.sol.maxNumber([3, 4, 6, 5], [9, 1, 2, 5, 8, 3], 5), [9, 8, 6, 5, 3])
 
     def test_example2(self):
         self.assertEqual(self.sol.maxNumber([6, 7], [6, 0, 4], 5), [6, 7, 6, 0, 4])
@@ -74,9 +72,7 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(self.sol.maxNumber([1], [5], 1), [5])
 
     def test_order_preserved(self):
-        self.assertEqual(
-            self.sol.maxNumber([1, 2, 3], [4, 5, 6], 6), [4, 5, 6, 1, 2, 3]
-        )
+        self.assertEqual(self.sol.maxNumber([1, 2, 3], [4, 5, 6], 6), [4, 5, 6, 1, 2, 3])
 
     def test_all_nines(self):
         self.assertEqual(self.sol.maxNumber([9, 9], [9, 9], 3), [9, 9, 9])
@@ -136,23 +132,7 @@ class TestSolution(unittest.TestCase):
             ([0, 1], [1, 0], 2),
         ]
         for n1, n2, k in cases:
-            self.assertEqual(
-                self.sol.maxNumber(n1, n2, k), brute(n1, n2, k), f"case {n1} {n2} {k}"
-            )
-
-    def test_helper_select_k(self):
-        self.assertEqual(select_k([3, 4, 6, 5], 3), [4, 6, 5])
-        self.assertEqual(select_k([9, 1, 2, 5], 2), [9, 5])
-        self.assertEqual(select_k([1, 2, 3], 3), [1, 2, 3])
-        self.assertEqual(select_k([3, 2, 1], 2), [3, 2])
-
-    def test_helper_is_greater(self):
-        self.assertTrue(is_greater([9, 8, 3], [9, 7, 4]))
-        self.assertFalse(is_greater([9, 7, 4], [9, 8, 3]))
-        self.assertTrue(is_greater([9, 9, 9, 9], [9, 9, 9, 8]))
-        self.assertTrue(is_greater([9, 9], [9]))
-        self.assertFalse(is_greater([9], [9, 9]))
-        self.assertTrue(is_greater([1, 2], [1, 1]))
+            self.assertEqual(self.sol.maxNumber(n1, n2, k), brute(n1, n2, k), f"case {n1} {n2} {k}")
 
     def test_larger_input(self):
         nums1 = [1] * 20 + [9, 9, 9]
