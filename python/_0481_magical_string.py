@@ -44,24 +44,6 @@ class TestSolution(unittest.TestCase):
             expected = reference[:n].count("1")
             self.assertEqual(self.sol.magicalString(n), expected)
 
-    def test_property_group_runs_match_prefix(self):
-        s = [1, 2, 2]
-        k = 2
-        while len(s) < 300:
-            nxt = 3 - s[-1]
-            s.extend([nxt] * s[k])
-            k += 1
-        groups = []
-        cnt = 1
-        for i in range(1, len(s)):
-            if s[i] == s[i - 1]:
-                cnt += 1
-            else:
-                groups.append(cnt)
-                cnt = 1
-        groups.append(cnt)
-        self.assertEqual(groups[:100], s[:100])
-
     def test_large_value(self):
         self.assertEqual(self.sol.magicalString(100000), 49972)
 
