@@ -2,6 +2,9 @@
 # https://leetcode.com/problems/flatten-nested-list-iterator/
 # Medium
 
+from typing import Optional
+
+
 class NestedInteger:
     def __init__(self, value, nested=False):
         self.value = value
@@ -10,19 +13,15 @@ class NestedInteger:
     def isInteger(self) -> bool:
         return not self.nested
 
-    def getInteger(self) -> int:
-        if self.nested:
-            return None
-        return self.value
+    def getInteger(self) -> Optional[int]:
+        return None if self.nested else self.value
 
     def getList(self):
-        if not self.nested:
-            return None
-        return self.value
+        return self.value if self.nested else None
 
 
 class NestedIterator:
-    def __init__(self, nestedList: [NestedInteger]):
+    def __init__(self, nestedList: list[NestedInteger]):
         raise Exception("Not solved yet")
 
     def next(self) -> int:

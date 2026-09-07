@@ -85,9 +85,7 @@ class TestSolution(unittest.TestCase):
     def test_long_list(self):
         values = list(range(5000))
         head = build_list(values)
-        self.assertEqual(
-            to_list(self.solution.reverseList(head)), list(reversed(values))
-        )
+        self.assertEqual(to_list(self.solution.reverseList(head)), list(reversed(values)))
 
 
 if __name__ == "__main__":
